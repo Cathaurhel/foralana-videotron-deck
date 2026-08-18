@@ -1,7 +1,7 @@
 ---
-name: Luminous Milestone (Y2K)
+name: Luminous Milestone (Chapter 20)
 colors:
-  # Core Y2K palette (as specified by the palette reference)
+  # Core Chapter 20 palette (as specified by the palette reference)
   elegant-black: '#1A1A1A'
   silver-chrome: '#E0E0E0'
   white-glow: '#FFFFFF'
@@ -124,14 +124,14 @@ spacing:
 
 ## Brand & Style
 
-The design system is a high-end, cinematic **Y2K** framework designed for a celebratory digital experience. It bridges the gap between early-2000s cyber-glam and high-production motion graphics. The personality is **sophisticated, atmospheric, and celebratory**, evoking the feeling of a premium night-time event or a high-profile "videotron" showcase — filtered through a chrome-and-neon Y2K lens.
+The design system is a high-end, cinematic **Chapter 20** framework designed for a celebratory digital experience. It bridges the gap between early-2000s cyber-glam and high-production motion graphics. The personality is **sophisticated, atmospheric, and celebratory**, evoking the feeling of a premium night-time event or a high-profile "videotron" showcase — filtered through a chrome-and-neon Chapter 20 lens.
 
-The visual style is **Elegant Dark Mode with Y2K Neon Glow**. It utilizes deep black-navy space to create infinite depth, punctuated by vibrant neon pink, cyan, lime, and purple light leaks, soft lens flares, and glossy chrome frames. It leans into a **Modern-Corporate** structure but breaks formality with **Glassmorphic** layers, glowing star/sparkle motifs, and high-fashion typography.
+The visual style is **Elegant Dark Mode with Chapter 20 Neon Glow**. It utilizes deep black-navy space to create infinite depth, punctuated by vibrant neon pink, cyan, lime, and purple light leaks, soft lens flares, and glossy chrome frames. It leans into a **Modern-Corporate** structure but breaks formality with **Glassmorphic** layers, glowing star/sparkle motifs, and high-fashion typography.
 
 **Key Aesthetic Principles:**
 - **Cinematic Depth:** Use of deep shadows and light overlays to create a 3D sense of space.
 - **Radiant Neon Accents:** Interactive elements should feel like they are emitting light — pink, cyan, lime, or purple — not just colored.
-- **Chrome & Glossy Surfaces:** Borders and frames pick up a metallic, glass-like highlight, referencing Y2K chrome/bubble aesthetics.
+- **Chrome & Glossy Surfaces:** Borders and frames pick up a metallic, glass-like highlight, referencing Chapter 20 chrome/bubble aesthetics.
 - **Editorial Precision:** Large-scale headings paired with delicate serif accents for a "milestone" look.
 
 ## Colors
@@ -176,7 +176,7 @@ Elevation is achieved through **light and translucency** rather than traditional
 - **Glassmorphism:** Foreground containers use a semi-transparent background (White at 5% opacity) with a `backdrop-filter: blur(20px)`.
 - **Glossy Frames:** Components use a 1px solid border with a linear gradient (White 30%, Transparent 70%) to create a "chrome rim" effect.
 - **Interactive Depth:** When an element is hovered or active, increase the `box-shadow` using a vibrant neon glow matched to that element's accent — Neon Pink `0 0 20px rgba(255,62,201,0.5)`, Neon Cyan `rgba(34,229,255,0.5)`, Neon Lime `rgba(212,255,0,0.5)`, or Neon Purple `rgba(123,47,255,0.5)`.
-- **Star / Sparkle Motifs:** Small `auto_awesome`-style sparkle glyphs in Neon Lime or White Glow, often with a subtle pulse animation, reinforce the Y2K "glow stars" motif near titles and section badges.
+- **Star / Sparkle Motifs:** Small `auto_awesome`-style sparkle glyphs in Neon Lime or White Glow, often with a subtle pulse animation, reinforce the Chapter 20 "glow stars" motif near titles and section badges.
 
 ## Shapes
 
@@ -197,7 +197,7 @@ The shape language is **Soft yet Structured**.
 - These are the centerpiece. Use the Glassmorphism effect with a 1px top-left highlight border.
 - Include a subtle "Lens Flare" SVG element positioned in the corner of the card to break the geometric frame.
 
-### Y2K Glow Cards
+### Chapter 20 Glow Cards
 - Cards use a 2px border in one of the four neon accents (rotate pink → cyan → lime → purple across a grid) with a matching soft outer glow (`box-shadow`) and inner glow.
 - Card titles are set in the matching accent color with a short text drop-shadow glow; a small solid-color dot (same accent) sits to the left of the title as a bullet/indicator.
 

@@ -1,6 +1,6 @@
 # ForAlana Videotron Deck
 
-14-slide HTML deck (Y2K neon theme) for the ForAlana birthday videotron project. Static HTML, no build step.
+14-slide HTML deck (Chapter 20 neon theme) for the ForAlana birthday videotron project. Static HTML, no build step.
 
 ## Live
 
