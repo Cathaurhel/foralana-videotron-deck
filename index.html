@@ -5,30 +5,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ForAlana Videotron Deck</title>
 <style>
-  body { background:#1a1730; color:#fff; font-family:sans-serif; max-width:640px; margin:64px auto; padding:0 20px; }
-  h1 { color:#ff3ec9; text-shadow:0 0 12px rgba(255,62,201,.5); }
-  ol { line-height:2.2; font-size:1.1rem; }
-  a { color:#22e5ff; text-decoration:none; }
-  a:hover { text-shadow:0 0 8px rgba(34,229,255,.8); }
+  html, body { margin:0; height:100%; background:#1a1730; overflow:hidden; }
+  iframe { display:block; width:100%; height:100%; border:none; }
+  .bar {
+    position:fixed; left:50%; bottom:20px; transform:translateX(-50%);
+    display:flex; align-items:center; gap:16px;
+    background:rgba(26,23,48,.85); backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.15); border-radius:999px;
+    padding:10px 18px; font-family:sans-serif; color:#fff; z-index:10;
+  }
+  .bar button {
+    background:none; border:1px solid #22e5ff; color:#22e5ff; border-radius:999px;
+    width:32px; height:32px; cursor:pointer; font-size:16px; line-height:1;
+  }
+  .bar button:hover { box-shadow:0 0 10px rgba(34,229,255,.7); }
+  .bar button:disabled { opacity:.3; cursor:default; box-shadow:none; }
+  .bar span { min-width:60px; text-align:center; color:#ff3ec9; font-size:14px; }
 </style>
 </head>
 <body>
-<h1>ForAlana Videotron Deck</h1>
-<ol>
-<li><a href="slide_1_title/code.html">Title</a></li>
-<li><a href="slide_2_background/code.html">Background</a></li>
-<li><a href="slide_3_moodboard/code.html">Moodboard &amp; Palet</a></li>
-<li><a href="slide_4_storyboard/code.html">Storyboard</a></li>
-<li><a href="slide_5_era_trainee_fixed_layout/code.html">Era Trainee</a></li>
-<li><a href="slide_6_era_cosmos/code.html">Era Cosmos</a></li>
-<li><a href="slide_7_era_snow/code.html">Era Snow</a></li>
-<li><a href="slide_8_era_love/code.html">Era Love</a></li>
-<li><a href="slide_9_lokasi_jadwal/code.html">Lokasi &amp; Jadwal</a></li>
-<li><a href="slide_10_placeholder_kabesha/code.html">Placeholder Kabesha</a></li>
-<li><a href="slide_11_placeholder_milestone/code.html">Placeholder Milestone</a></li>
-<li><a href="slide_12_outro_wishes/code.html">Outro Wishes</a></li>
-<li><a href="slide_13_referensi_video/code.html">Referensi Video</a></li>
-<li><a href="slide_14_penutup_terima_kasih/code.html">Penutup &amp; Terima Kasih</a></li>
-</ol>
+<iframe id="frame"></iframe>
+<div class="bar">
+  <button id="prev" aria-label="Sebelumnya">&#8592;</button>
+  <span id="counter"></span>
+  <button id="next" aria-label="Berikutnya">&#8594;</button>
+</div>
+<script>
+  const slides = [
+    "slide_1_title/code.html",
+    "slide_2_background/code.html",
+    "slide_3_moodboard/code.html",
+    "slide_4_storyboard/code.html",
+    "slide_5_era_trainee_fixed_layout/code.html",
+    "slide_6_era_cosmos/code.html",
+    "slide_7_era_snow/code.html",
+    "slide_8_era_love/code.html",
+    "slide_9_lokasi_jadwal/code.html",
+    "slide_10_placeholder_kabesha/code.html",
+    "slide_11_placeholder_milestone/code.html",
+    "slide_12_outro_wishes/code.html",
+    "slide_13_referensi_video/code.html",
+    "slide_14_penutup_terima_kasih/code.html",
+  ];
+  const frame = document.getElementById("frame");
+  const counter = document.getElementById("counter");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+
+  function show(i) {
+    i = Math.max(0, Math.min(slides.length - 1, i));
+    frame.src = slides[i];
+    counter.textContent = (i + 1) + " / " + slides.length;
+    prevBtn.disabled = i === 0;
+    nextBtn.disabled = i === slides.length - 1;
+    location.hash = i + 1;
+  }
+
+  function current() {
+    const n = parseInt(location.hash.slice(1), 10);
+    return Number.isInteger(n) ? n - 1 : 0;
+  }
+
+  prevBtn.onclick = () => show(current() - 1);
+  nextBtn.onclick = () => show(current() + 1);
+  window.onhashchange = () => show(current());
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") show(current() - 1);
+    if (e.key === "ArrowRight") show(current() + 1);
+  });
+
+  show(current());
+</script>
 </body>
 </html>

@@ -8,7 +8,7 @@ https://cathaurhel.github.io/foralana-videotron-deck/
 
 ## Structure
 
-Each `slide_*/code.html` is a standalone slide. `index.html` links to all of them in order. `luminous_milestone/DESIGN.md` documents the color palette and style tokens shared across slides.
+Each `slide_*/code.html` is a standalone slide. `index.html` is a single-page viewer that loads them into an iframe with prev/next controls, keyboard arrow navigation, and a `#N` deep link per slide. `luminous_milestone/DESIGN.md` documents the color palette and style tokens shared across slides.
 
 ## Local preview
 
