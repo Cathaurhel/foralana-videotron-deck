@@ -2,78 +2,10 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="0; url=slide_1_title/code.html">
 <title>ForAlana Videotron Deck</title>
-<style>
-  html, body { margin:0; height:100%; background:#1a1730; overflow:hidden; }
-  iframe { display:block; width:100%; height:calc(100% - 56px); border:none; }
-  .bar {
-    height:56px;
-    display:flex; align-items:center; justify-content:center; gap:16px;
-    background:#1a1730; border-top:1px solid rgba(255,255,255,.15);
-    font-family:sans-serif; color:#fff;
-  }
-  .bar button {
-    background:none; border:1px solid #22e5ff; color:#22e5ff; border-radius:999px;
-    width:32px; height:32px; cursor:pointer; font-size:16px; line-height:1;
-  }
-  .bar button:hover { box-shadow:0 0 10px rgba(34,229,255,.7); }
-  .bar button:disabled { opacity:.3; cursor:default; box-shadow:none; }
-  .bar span { min-width:60px; text-align:center; color:#ff3ec9; font-size:14px; }
-</style>
 </head>
 <body>
-<iframe id="frame"></iframe>
-<div class="bar">
-  <button id="prev" aria-label="Sebelumnya">&#8592;</button>
-  <span id="counter"></span>
-  <button id="next" aria-label="Berikutnya">&#8594;</button>
-</div>
-<script>
-  const slides = [
-    "slide_1_title/code.html",
-    "slide_2_background/code.html",
-    "slide_3_moodboard/code.html",
-    "slide_4_storyboard/code.html",
-    "slide_5_era_trainee_fixed_layout/code.html",
-    "slide_6_era_cosmos/code.html",
-    "slide_7_era_snow/code.html",
-    "slide_8_era_love/code.html",
-    "slide_9_lokasi_jadwal/code.html",
-    "slide_10_placeholder_kabesha/code.html",
-    "slide_11_placeholder_milestone/code.html",
-    "slide_12_outro_wishes/code.html",
-    "slide_13_referensi_video/code.html",
-    "slide_14_penutup_terima_kasih/code.html",
-  ];
-  const frame = document.getElementById("frame");
-  const counter = document.getElementById("counter");
-  const prevBtn = document.getElementById("prev");
-  const nextBtn = document.getElementById("next");
-
-  function show(i) {
-    i = Math.max(0, Math.min(slides.length - 1, i));
-    frame.src = slides[i];
-    counter.textContent = (i + 1) + " / " + slides.length;
-    prevBtn.disabled = i === 0;
-    nextBtn.disabled = i === slides.length - 1;
-    location.hash = i + 1;
-  }
-
-  function current() {
-    const n = parseInt(location.hash.slice(1), 10);
-    return Number.isInteger(n) ? n - 1 : 0;
-  }
-
-  prevBtn.onclick = () => show(current() - 1);
-  nextBtn.onclick = () => show(current() + 1);
-  window.onhashchange = () => show(current());
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowLeft") show(current() - 1);
-    if (e.key === "ArrowRight") show(current() + 1);
-  });
-
-  show(current());
-</script>
+<p><a href="slide_1_title/code.html">Lanjut ke ForAlana Videotron Deck</a></p>
 </body>
 </html>
