@@ -1,0 +1,182 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ForAlana Videotron Birthday Project</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,400;1,900&amp;family=EB+Garamond:wght@400&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#ff9fe3",
+                        "secondary": "#ff3ec9",
+                        "on-error": "#2a0000",
+                        "secondary-fixed": "#ffd6f3",
+                        "on-surface": "#ffffff",
+                        "outline": "#888888",
+                        "primary-container": "#100e1c",
+                        "tertiary-fixed-dim": "#d4ff00",
+                        "surface-variant": "#342e58",
+                        "inverse-on-surface": "#1a1a1a",
+                        "tertiary-container": "#1a1a1a",
+                        "inverse-primary": "#7b2fff",
+                        "on-secondary-fixed-variant": "#7a1f66",
+                        "background": "#1a1730",
+                        "primary-fixed-dim": "#22e5ff",
+                        "primary-fixed": "#b8f5ff",
+                        "on-primary": "#0a1a1f",
+                        "on-primary-fixed-variant": "#0f3a40",
+                        "surface-container-low": "#1c1930",
+                        "secondary-container": "#4a1240",
+                        "on-error-container": "#ffd6d6",
+                        "secondary-fixed-dim": "#ff3ec9",
+                        "surface-container-high": "#2a2548",
+                        "inverse-surface": "#ffffff",
+                        "surface-container-lowest": "#100e1c",
+                        "on-primary-fixed": "#071a1d",
+                        "error-container": "#7a0010",
+                        "tertiary-fixed": "#f1ffa8",
+                        "surface-container": "#201c38",
+                        "surface-dim": "#1a1730",
+                        "on-secondary": "#2e0a24",
+                        "error": "#ff6b6b",
+                        "on-tertiary-fixed-variant": "#3a4200",
+                        "tertiary": "#d4ff00",
+                        "outline-variant": "#3a3560",
+                        "on-secondary-fixed": "#3a0a30",
+                        "on-primary-container": "#22e5ff",
+                        "on-tertiary-fixed": "#1f2400",
+                        "on-background": "#ffffff",
+                        "surface-tint": "#22e5ff",
+                        "surface-container-highest": "#342e58",
+                        "primary": "#22e5ff",
+                        "on-tertiary": "#1a1f00",
+                        "surface": "#1a1730",
+                        "surface-bright": "#2a2645",
+                        "on-tertiary-container": "#d4ff00",
+                        "on-surface-variant": "#e0e0e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-md": "32px",
+                        "stack-sm": "16px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "stack-lg": "64px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat", "sans-serif"],
+                        "display-lg": ["Montserrat", "sans-serif"],
+                        "accent-serif": ["EB Garamond", "serif"],
+                        "headline-xl": ["Montserrat", "sans-serif"],
+                        "label-sm": ["Montserrat", "sans-serif"],
+                        "display-lg-mobile": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Montserrat", "sans-serif"],
+                        "headline-lg": ["Montserrat", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "accent-serif": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .atmospheric-glow {
+            background: radial-gradient(circle at center, rgba(123,47,255,0.2) 0%, transparent 70%);
+        }
+        .text-glow-white {
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+        .btn-glow-hover:hover {
+            box-shadow: 0 0 20px rgba(255,62,201,0.5);
+            border-color: rgba(255,62,201,0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Atmospheric Background Layers -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute inset-0 atmospheric-glow opacity-50 scale-150 transform"></div>
+<div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-secondary opacity-5 blur-[120px]"></div>
+<div class="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-primary opacity-5 blur-[150px]"></div>
+</div>
+<!-- Navigation suppressed for transactional/splash screen -->
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center relative z-10 px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="text-center max-w-container-max mx-auto flex flex-col items-center justify-center space-y-stack-md">
+<!-- Pre-title / Project Info -->
+<div class="flex items-center gap-unit opacity-80 mb-4 animate-fade-in-up" style="animation-delay: 0.2s; opacity: 1; transform: translateY(0px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary">ForAlana / Draft Videotron</span>
+</div>
+<!-- Main Title Group -->
+<div class="space-y-unit relative">
+<!-- Decorative Lens Flare SVG placeholder -->
+<div class="absolute -top-10 -left-10 opacity-30 w-32 h-32 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent blur-xl"></div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg italic uppercase text-on-background text-glow-white animate-fade-in-up" style="opacity: 1; transform: translateY(0px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
+                    ForAlana
+                </h1>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary font-bold tracking-tight animate-fade-in-up text-glow-white" style="animation-delay: 0.3s; opacity: 1; transform: translateY(0px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
+                    VIDEOTRON BIRTHDAY PROJECT
+                </h2>
+<h3 class="text-accent-serif text-secondary mt-4 animate-fade-in-up font-label-sm text-glow-white" style="animation-delay: 0.4s; opacity: 1; transform: translateY(0px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">KONSEP CHAPTER - 2026</h3>
+</div>
+<!-- Action Button -->
+<div class="pt-stack-md animate-fade-in-up" style="animation-delay: 0.6s; opacity: 1; transform: translateY(0px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
+<button class="group relative inline-flex items-center justify-center px-8 py-4 bg-primary-container text-on-background font-label-sm text-label-sm uppercase tracking-widest border border-white/30 rounded-full overflow-hidden transition-all duration-300 ease-out btn-glow-hover hover:scale-105">
+<span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-white"></span>
+<span class="relative flex items-center gap-2">
+                        Start Presentation
+                        <span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</span>
+</button>
+</div>
+<!-- Footer Note -->
+<div class="mt-stack-lg flex items-center justify-center gap-2 text-on-surface-variant/60 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span class="">Dokumen Perencanaan Videotron • Latar belakang, arahan visual &amp; struktur tayangan</span>
+</div>
+</div>
+<div class="absolute bottom-8 right-8 md:right-margin-desktop text-on-surface-variant/60 font-label-sm text-label-sm tracking-widest uppercase">Slide 01/14</div></main>
+<!-- Footer Component Suppressed for Splash Screen per rules, but included here to satisfy the structure if needed, hidden via CSS if strictly splash. Decided to keep clean splash. -->
+<script>
+        // Simple entry animation logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-fade-in-up');
+            animatedElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, (index * 150) + 100);
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body></html>

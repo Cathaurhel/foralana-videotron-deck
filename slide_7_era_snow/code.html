@@ -1,0 +1,242 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Era Snow - Milestones</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#ff9fe3",
+                      "surface-container-highest": "#342e58",
+                      "surface-bright": "#2a2645",
+                      "surface": "#1a1730",
+                      "surface-container": "#201c38",
+                      "primary-container": "#100e1c",
+                      "surface-tint": "#22e5ff",
+                      "surface-container-low": "#1c1930",
+                      "on-primary-fixed": "#071a1d",
+                      "tertiary-container": "#1a1a1a",
+                      "on-secondary-fixed": "#3a0a30",
+                      "primary-fixed": "#b8f5ff",
+                      "background": "#1a1730",
+                      "on-tertiary": "#1a1f00",
+                      "on-primary-container": "#22e5ff",
+                      "surface-variant": "#342e58",
+                      "on-primary": "#0a1a1f",
+                      "error": "#ff6b6b",
+                      "surface-container-lowest": "#100e1c",
+                      "tertiary-fixed-dim": "#d4ff00",
+                      "on-tertiary-container": "#d4ff00",
+                      "on-error-container": "#ffd6d6",
+                      "on-primary-fixed-variant": "#0f3a40",
+                      "on-error": "#2a0000",
+                      "on-tertiary-fixed-variant": "#3a4200",
+                      "primary-fixed-dim": "#22e5ff",
+                      "secondary": "#ff3ec9",
+                      "tertiary-fixed": "#f1ffa8",
+                      "secondary-fixed-dim": "#ff3ec9",
+                      "primary": "#22e5ff",
+                      "outline": "#888888",
+                      "inverse-surface": "#ffffff",
+                      "outline-variant": "#3a3560",
+                      "surface-container-high": "#2a2548",
+                      "inverse-on-surface": "#1a1a1a",
+                      "secondary-fixed": "#ffd6f3",
+                      "on-surface": "#ffffff",
+                      "secondary-container": "#4a1240",
+                      "inverse-primary": "#7b2fff",
+                      "on-secondary": "#2e0a24",
+                      "on-surface-variant": "#e0e0e0",
+                      "on-tertiary-fixed": "#1f2400",
+                      "error-container": "#7a0010",
+                      "tertiary": "#d4ff00",
+                      "surface-dim": "#1a1730",
+                      "on-background": "#ffffff",
+                      "on-secondary-fixed-variant": "#7a1f66"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "stack-md": "32px",
+                      "container-max": "1280px",
+                      "stack-lg": "64px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Montserrat"],
+                      "body-md": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "accent-serif": ["EB Garamond"],
+                      "headline-xl": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "body-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "accent-serif": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                      "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Atmospheric Glow specific to 'Snow' Era */
+        .snow-glow {
+            background: radial-gradient(circle at center, rgba(34,229,255,0.15) 0%, transparent 60%);
+        }
+        
+        .snow-glow-intense {
+             box-shadow: 0 0 30px rgba(34,229,255,0.3);
+        }
+
+        .snow-border {
+             border: 1px solid rgba(255,255,255,0.1);
+             background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+        }
+        
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        
+        /* Typography overriding colors for specific sections to fit the snow theme while keeping config structure */
+        .text-snow-accent {
+            color: #22e5ff; /* Keeping this specific override for the prompt's thematic request, applied locally */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-md antialiased overflow-x-hidden">
+<!-- Ambient Background Glow -->
+<div class="fixed inset-0 pointer-events-none z-0 snow-glow opacity-60"></div>
+<div class="fixed top-[-20%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-[rgba(34,229,255,0.05)] blur-[120px] pointer-events-none"></div>
+<div class="fixed bottom-[-20%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[rgba(34,229,255,0.05)] blur-[100px] pointer-events-none"></div>
+<!-- TopAppBar (Hidden on Mobile, Visible on Desktop) -->
+<nav class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-xl shadow-[0_0_20px_rgba(123,47,255,0.3)] border-b border-white/10 transition-all duration-300 ease-in-out hover:scale-[1.02]">
+<div class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background tracking-tighter italic uppercase">
+            ForAlana
+        </div>
+<ul class="flex items-center gap-8 font-label-sm text-label-sm">
+<li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Konsep</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Moodboard</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Storyboard</a></li>
+<li class=""><a class="text-secondary font-bold border-b-2 border-secondary pb-1 hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Milestones</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Outro</a></li>
+</ul>
+<a class="font-label-sm text-label-sm text-primary hover:text-secondary transition-colors hidden lg:block" href="www.foralana.com">
+            www.foralana.com
+        </a>
+</nav>
+<!-- Main Content Area -->
+<main class="relative z-10 pt-stack-lg md:pt-32 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto min-h-screen flex flex-col justify-center">
+<!-- Header Section -->
+<header class="mb-stack-lg text-center md:text-left relative"><div class="absolute top-0 right-0 font-label-sm text-label-sm text-on-surface-variant opacity-60">Slide 07/14</div>
+<span class="block font-accent-serif text-accent-serif text-snow-accent mb-2 opacity-80">Phase 03</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-background uppercase tracking-tighter mb-4">
+                Era Snow
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">
+                A pivotal moment of crystallization. The landscape transforms, revealing new collaborative structures and defining moments that solidifed the foundation for what's next.
+            </p>
+</header>
+<!-- Bento Grid Milestones -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Milestone 1: First Snow Team Announce (Large Feature) -->
+<article class="md:col-span-8 glass-panel snow-border rounded-xl p-stack-md relative overflow-hidden group hover:snow-glow-intense transition-all duration-500">
+<div class="absolute inset-0 bg-gradient-to-br from-[rgba(34,229,255,0.1)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<div class="flex flex-col h-full justify-between relative z-10">
+<div class="mb-stack-sm flex items-start justify-between">
+<div class="bg-[rgba(34,229,255,0.1)] px-4 py-1 rounded-full border border-[rgba(34,229,255,0.2)] inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-snow-accent" style="font-variation-settings: &quot;FILL&quot; 1;">ac_unit</span>
+<span class="font-label-sm text-label-sm text-on-background">Key Milestone</span>
+</div>
+<span class="font-display-lg text-display-lg text-on-surface-variant opacity-20 pointer-events-none absolute right-4 top-4 select-none">01</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center flex-grow">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-4">First Snow Team Announce</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                                The official formation. Bringing together distinct talents to forge a unified front under the new moniker. This marked the shift from individual contributors to a cohesive unit.
+                            </p>
+<a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-on-background group/btn" href="#">
+<span class="">Explore Announcement</span>
+<span class="material-symbols-outlined text-snow-accent transition-transform group-hover/btn:translate-x-1">ac_unit</span>
+</a>
+</div>
+<div class="h-48 lg:h-full min-h-[200px] w-full rounded-lg overflow-hidden relative snow-border bg-surface-container-low">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 opacity-80 mix-blend-screen" data-alt="A cinematic, high-contrast digital rendering of a sleek, abstract geometric structure resembling a crystalline snowflake forming. The scene is illuminated by soft, cool light-blue and crisp white light leaks against a pitch-black background. The aesthetic is highly polished, modern corporate mixed with high-end sci-fi editorial." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQKXzieL0V_TrV_QqHOstyBitm9Xmy3mpQhNxTpuCFRLZfWizaNENaQ3BDv0xZQeTdWooQmabit6bTRiB_1AJD-hO-KVDgArESuC0xN4apvaR43hLgqE-P-QLiwClY1lul4UJBl7QMfR7wvYrudLV-0h73DJv22VlV5EmZP0B1rHk6qW333px_252DN2VGNoj9cXsFOxlRH0BZJU4tKE0Ts0GDIqy_CjiTrITb6R7w8JQaUrAmo9DJBw')"></div>
+</div>
+</div>
+</div>
+</article>
+<!-- Milestone 2: FF Futsal -->
+<article class="md:col-span-4 glass-panel snow-border rounded-xl p-stack-md relative overflow-hidden group hover:snow-glow-intense transition-all duration-500 flex flex-col justify-between"><div class="mb-4"><div class="bg-[rgba(34,229,255,0.1)] px-4 py-1 rounded-full border border-[rgba(34,229,255,0.2)] w-fit inline-flex items-center gap-2 mb-6"><span class="material-symbols-outlined text-[16px] text-snow-accent" style="font-variation-settings: 'FILL' 1;">sports_soccer</span><span class="font-label-sm text-label-sm text-on-background">Event</span></div><h3 class="font-headline-lg text-headline-lg text-on-background mb-2">FF Futsal</h3><p class="font-body-md text-body-md text-on-surface-variant">A dynamic intersection of strategy and agility. Building camaraderie off-screen that translates to on-screen synergy.</p></div><div class="mt-6 flex justify-end"><span class="font-display-lg-mobile text-display-lg-mobile text-on-surface-variant opacity-20 pointer-events-none select-none">02</span></div></article>
+<!-- Milestone 3: Pokemon -->
+<article class="md:col-span-5 glass-panel snow-border rounded-xl p-stack-md relative overflow-hidden group hover:snow-glow-intense transition-all duration-500 flex flex-col justify-between"><div class="mb-4"><div class="bg-[rgba(34,229,255,0.1)] px-4 py-1 rounded-full border border-[rgba(34,229,255,0.2)] w-fit inline-flex items-center gap-2 mb-6"><span class="material-symbols-outlined text-[16px] text-snow-accent" style="font-variation-settings: 'FILL' 1;">20mp</span><span class="font-label-sm text-label-sm text-on-background">Campaign</span></div><h3 class="font-headline-lg text-headline-lg text-on-background mb-2">Pokemon Integration</h3><p class="font-body-md text-body-md text-on-surface-variant">Nostalgia meets modern engagement. A strategic integration that expanded audience reach through beloved pop-culture icons.</p></div><div class="mt-6 flex justify-between items-end"><div class="w-16 h-16 rounded-full border border-[rgba(34,229,255,0.3)] flex items-center justify-center animate-[pulse_4s_ease-in-out_infinite]"><div class="w-2 h-2 bg-snow-accent rounded-full shadow-[0_0_10px_rgba(34,229,255,1)]"></div></div><span class="font-display-lg-mobile text-display-lg-mobile text-on-surface-variant opacity-20 pointer-events-none select-none">03</span></div></article>
+<!-- Milestone 4: YT Fam 100 -->
+<article class="md:col-span-7 glass-panel snow-border rounded-xl p-stack-md relative overflow-hidden group hover:snow-glow-intense transition-all duration-500 flex flex-col justify-between min-h-[300px]"><div class="absolute inset-0 z-0"><div class="bg-cover bg-center w-full h-full opacity-20 mix-blend-luminosity" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKZ0K_KplpxCY7DgNuDx0M59Yugam4d7YL2_P-7L6V8IRohfMmbPvjGByeqSHT6nNVGadmR2bnA6tQ-cpVMSREJOu4so4Bq32lur3hEzX3aekpgmpmOnNUX2ttUAjvodHU13M1MkmpaVEkcAuDYF8-wOXDv7v-8YSjLEVEYkKfsCovjzAYXshIylpB6QLYJOFPMIDydprXk_jZ4bry5I8l7AdKt0aUOOwtxgOchdEWgsKHFOxn9uuP9w')"></div><div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div></div><div class="relative z-10 flex flex-col h-full justify-between"><div class="mb-4"><div class="bg-[rgba(34,229,255,0.1)] px-4 py-1 rounded-full border border-[rgba(34,229,255,0.2)] w-fit inline-flex items-center gap-2 mb-6 backdrop-blur-md"><span class="material-symbols-outlined text-[16px] text-snow-accent" style="font-variation-settings: 'FILL' 1;">groups</span><span class="font-label-sm text-label-sm text-on-background">Community</span></div><h3 class="font-headline-lg text-headline-lg text-on-background mb-2">YT Fam 100</h3><p class="font-body-md text-body-md text-on-surface-variant max-w-lg">A celebration of community growth. Reaching a major milestone alongside the audience that built the foundation.</p></div><div class="mt-6 flex justify-end"><span class="font-display-lg-mobile text-display-lg-mobile text-on-surface-variant opacity-20 pointer-events-none select-none">04</span></div></div></article>
+</section>
+</main>
+<!-- BottomNavBar (Visible on Mobile, Hidden on Desktop) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest/90 backdrop-blur-2xl rounded-t-full border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="font-label-sm text-label-sm">Trainee</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-label-sm text-label-sm">Cosmos</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 shadow-[0_0_20px_rgba(255,62,201,0.4)] scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
+<span class="font-label-sm text-label-sm">Snow</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label-sm text-label-sm">Love</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">celebration</span>
+<span class="font-label-sm text-label-sm">Outro</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-4 py-stack-md px-margin-mobile md:px-margin-desktop bg-background border-t border-outline-variant/30 relative z-10 mt-stack-lg mb-20 md:mb-0">
+<div class="font-accent-serif text-accent-serif text-secondary mb-4 md:mb-0">
+            ForAlana
+        </div>
+<div class="text-center font-body-md text-body-md text-on-surface-variant order-last md:order-none">© 2026 ForAlana Videotron Birthday Project. All rights reserved.</div>
+<ul class="flex gap-4 font-body-md text-body-md text-on-surface-variant">
+<li class=""><a class="hover:text-secondary transition-colors text-on-surface-variant" href="#">Terms</a></li>
+<li class=""><a class="hover:text-secondary transition-colors text-on-surface-variant" href="#">Privacy</a></li>
+<li class=""><a class="hover:text-secondary transition-colors text-on-surface-variant" href="#">Credits</a></li>
+<li class=""><a class="hover:text-secondary transition-colors text-on-surface-variant" href="#">www.foralana.com</a></li>
+</ul>
+</footer>
+
+
+
+
+</body></html>

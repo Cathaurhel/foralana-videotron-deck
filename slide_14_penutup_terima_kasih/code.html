@@ -1,0 +1,199 @@
+<!DOCTYPE html><html class="dark" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ForAlana - Penutup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,900&amp;family=EB+Garamond:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#ff9fe3",
+                      "surface-container-highest": "#342e58",
+                      "surface-bright": "#2a2645",
+                      "surface": "#1a1730",
+                      "surface-container": "#201c38",
+                      "primary-container": "#100e1c",
+                      "surface-tint": "#22e5ff",
+                      "surface-container-low": "#1c1930",
+                      "on-primary-fixed": "#071a1d",
+                      "tertiary-container": "#1a1a1a",
+                      "on-secondary-fixed": "#3a0a30",
+                      "primary-fixed": "#b8f5ff",
+                      "background": "#1a1730",
+                      "on-tertiary": "#1a1f00",
+                      "on-primary-container": "#22e5ff",
+                      "surface-variant": "#342e58",
+                      "on-primary": "#0a1a1f",
+                      "error": "#ff6b6b",
+                      "surface-container-lowest": "#100e1c",
+                      "tertiary-fixed-dim": "#d4ff00",
+                      "on-tertiary-container": "#d4ff00",
+                      "on-error-container": "#ffd6d6",
+                      "on-primary-fixed-variant": "#0f3a40",
+                      "on-error": "#2a0000",
+                      "on-tertiary-fixed-variant": "#3a4200",
+                      "primary-fixed-dim": "#22e5ff",
+                      "secondary": "#ff3ec9",
+                      "tertiary-fixed": "#f1ffa8",
+                      "secondary-fixed-dim": "#ff3ec9",
+                      "primary": "#22e5ff",
+                      "outline": "#888888",
+                      "inverse-surface": "#ffffff",
+                      "outline-variant": "#3a3560",
+                      "surface-container-high": "#2a2548",
+                      "inverse-on-surface": "#1a1a1a",
+                      "secondary-fixed": "#ffd6f3",
+                      "on-surface": "#ffffff",
+                      "secondary-container": "#4a1240",
+                      "inverse-primary": "#7b2fff",
+                      "on-secondary": "#2e0a24",
+                      "on-surface-variant": "#e0e0e0",
+                      "on-tertiary-fixed": "#1f2400",
+                      "error-container": "#7a0010",
+                      "tertiary": "#d4ff00",
+                      "surface-dim": "#1a1730",
+                      "on-background": "#ffffff",
+                      "on-secondary-fixed-variant": "#7a1f66"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "stack-md": "32px",
+                      "container-max": "1280px",
+                      "stack-lg": "64px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Montserrat"],
+                      "body-md": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "accent-serif": ["EB Garamond"],
+                      "headline-xl": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "display-lg": ["Montserrat"],
+                      "body-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "accent-serif": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                      "display-lg": ["80px", {"lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .glow-bg {
+            background: radial-gradient(circle at center, rgba(123,47,255,0.4) 0%, transparent 70%);
+        }
+        .glass-panel {
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255,62,201,0.3);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-x-hidden selection:bg-secondary selection:text-background">
+<!-- Ambient Background Glow -->
+<div class="fixed inset-0 pointer-events-none z-0 glow-bg opacity-70 mix-blend-screen"></div>
+<!-- TopAppBar (Desktop Only) -->
+<header class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(123,47,255,0.3)] transition-all duration-300 ease-in-out">
+<div class="font-display-lg text-display-lg text-on-background tracking-tighter italic uppercase text-glow">ForAlana</div>
+<nav class="flex gap-stack-md">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-colors" href="#">Konsep</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-colors" href="#">Moodboard</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-colors" href="#">Storyboard</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-colors" href="#">Milestones</a>
+<a class="font-label-sm text-label-sm text-secondary font-bold border-b-2 border-secondary pb-1 transition-all" href="#">Outro</a>
+</nav>
+<a class="font-label-sm text-label-sm text-primary hover:text-secondary transition-colors" href="#">www.foralana.com</a>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center relative z-10 px-margin-mobile md:px-margin-desktop py-stack-lg min-h-[819px]">
+<div class="glass-panel rounded-xl p-stack-lg md:p-[80px] max-w-container-max w-full flex flex-col items-center text-center space-y-stack-md relative overflow-hidden">
+<!-- Decorative Sparks -->
+<div class="absolute top-10 left-10 text-secondary opacity-50 animate-float"><span class="material-symbols-outlined" style="font-size: 40px;">auto_awesome</span></div>
+<div class="absolute bottom-10 right-10 text-secondary opacity-50 animate-float" style="animation-delay: 2s;"><span class="material-symbols-outlined" style="font-size: 60px;">celebration</span></div>
+<div class="font-label-sm text-label-sm text-secondary/60 tracking-[0.2em] uppercase mb-4">Slide 14/14</div><h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background tracking-tighter italic uppercase text-glow mb-unit">
+                ForAlana
+            </h1>
+<p class="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-secondary max-w-3xl leading-tight mx-auto">
+                Terima Kasih atas dedikasi dan perjalanan luar biasa ini.
+            </p>
+<div class="h-px w-24 bg-gradient-to-r from-transparent via-secondary to-transparent my-stack-sm opacity-50"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Ini bukan sekadar akhir dari sebuah presentasi, melainkan awal dari realisasi visual yang memukau. Mari wujudkan videotron ini bersama.
+            </p>
+<button class="mt-stack-md px-8 py-4 bg-surface-container-highest border border-white/20 rounded-full font-label-sm text-label-sm text-on-background uppercase tracking-widest hover:border-secondary hover:shadow-[0_0_20px_rgba(255,62,201,0.5)] transition-all duration-300 flex items-center gap-2 group">Kembali ke Awal <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></button>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest/90 backdrop-blur-2xl rounded-t-full border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="font-label-sm text-label-sm text-[10px]">Trainee</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-[10px]">Cosmos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">ac_unit</span>
+<span class="font-label-sm text-label-sm text-[10px]">Snow</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label-sm text-label-sm text-[10px]">Love</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 shadow-[0_0_20px_rgba(255,62,201,0.4)] scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">celebration</span>
+<span class="font-label-sm text-label-sm text-[10px]">Outro</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-4 py-stack-md px-margin-desktop bg-background border-t border-outline-variant/30 relative z-10 pb-[100px] md:pb-stack-md">
+<div class="font-accent-serif text-accent-serif text-secondary opacity-80">
+            ForAlana
+        </div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60 text-center md:text-left">© 2026 ForAlana Videotron Birthday Project. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Credits</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">www.foralana.com</a>
+</div>
+</footer>
+
+
+
+
+</body></html>

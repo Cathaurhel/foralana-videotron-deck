@@ -1,0 +1,348 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Sketsa Visual Placeholder Kabesha - ForAlana</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#ff9fe3",
+                        "surface-container-highest": "#342e58",
+                        "surface-bright": "#2a2645",
+                        "surface": "#1a1730",
+                        "surface-container": "#201c38",
+                        "primary-container": "#100e1c",
+                        "surface-tint": "#22e5ff",
+                        "surface-container-low": "#1c1930",
+                        "on-primary-fixed": "#071a1d",
+                        "tertiary-container": "#1a1a1a",
+                        "on-secondary-fixed": "#3a0a30",
+                        "primary-fixed": "#b8f5ff",
+                        "background": "#1a1730",
+                        "on-tertiary": "#1a1f00",
+                        "on-primary-container": "#22e5ff",
+                        "surface-variant": "#342e58",
+                        "on-primary": "#0a1a1f",
+                        "error": "#ff6b6b",
+                        "surface-container-lowest": "#100e1c",
+                        "tertiary-fixed-dim": "#d4ff00",
+                        "on-tertiary-container": "#d4ff00",
+                        "on-error-container": "#ffd6d6",
+                        "on-primary-fixed-variant": "#0f3a40",
+                        "on-error": "#2a0000",
+                        "on-tertiary-fixed-variant": "#3a4200",
+                        "primary-fixed-dim": "#22e5ff",
+                        "secondary": "#ff3ec9",
+                        "tertiary-fixed": "#f1ffa8",
+                        "secondary-fixed-dim": "#ff3ec9",
+                        "primary": "#22e5ff",
+                        "outline": "#888888",
+                        "inverse-surface": "#ffffff",
+                        "outline-variant": "#3a3560",
+                        "surface-container-high": "#2a2548",
+                        "inverse-on-surface": "#1a1a1a",
+                        "secondary-fixed": "#ffd6f3",
+                        "on-surface": "#ffffff",
+                        "secondary-container": "#4a1240",
+                        "inverse-primary": "#7b2fff",
+                        "on-secondary": "#2e0a24",
+                        "on-surface-variant": "#e0e0e0",
+                        "on-tertiary-fixed": "#1f2400",
+                        "error-container": "#7a0010",
+                        "tertiary": "#d4ff00",
+                        "surface-dim": "#1a1730",
+                        "on-background": "#ffffff",
+                        "on-secondary-fixed-variant": "#7a1f66"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-md": "32px",
+                        "container-max": "1280px",
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "accent-serif": ["EB Garamond"],
+                        "headline-xl": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "accent-serif": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #1a1730;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Atmospheric Glows */
+        .glow-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 30%, rgba(123,47,255,0.2) 0%, transparent 60%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .glow-accent {
+            position: absolute;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(255,62,201,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Glassmorphism & Glossy Frames */
+        .glass-panel {
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .chrome-border {
+            position: relative;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid transparent;
+            background-clip: padding-box;
+        }
+        
+        .chrome-border::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0) 100%);
+            pointer-events: none;
+        }
+
+        .interactive-glow:hover {
+            box-shadow: 0 0 30px rgba(255,62,201,0.3);
+            border-color: rgba(255,62,201,0.5);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #100e1c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #342e58;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7b2fff;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- Atmospheric Background -->
+<div class="glow-bg"></div>
+<div class="glow-accent" style="top: -10%; left: -10%;"></div>
+<div class="glow-accent" style="bottom: -20%; right: -10%; background: radial-gradient(circle, rgba(74,18,64,0.08) 0%, transparent 70%);"></div>
+<!-- TopAppBar (Web) -->
+<nav class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-xl shadow-[0_0_20px_rgba(123,47,255,0.3)] border-b border-white/10 transition-all duration-300 ease-in-out">
+<div class="font-display-lg text-display-lg text-on-background tracking-tighter italic uppercase">
+            ForAlana
+        </div>
+<div class="flex gap-stack-md font-label-sm text-label-sm">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Konsep</a>
+<a class="text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-all duration-300 ease-in-out hover:scale-[1.02]" href="#">Moodboard</a>
+<a class="text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-all duration-300 ease-in-out hover:scale-[1.02]" href="#">Storyboard</a>
+<a class="text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-all duration-300 ease-in-out hover:scale-[1.02]" href="#">Milestones</a>
+<a class="text-on-surface-variant hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-all duration-300 ease-in-out hover:scale-[1.02]" href="#">Outro</a>
+</div>
+<div>
+<a class="text-primary font-label-sm text-label-sm hover:text-secondary transition-colors" href="#">www.foralana.com</a>
+</div>
+</nav>
+<!-- TopAppBar (Mobile Anchor) -->
+<header class="md:hidden fixed top-0 left-0 w-full z-50 flex justify-center items-center px-margin-mobile py-4 bg-background/80 backdrop-blur-xl border-b border-white/10">
+<div class="font-display-lg-mobile text-display-lg-mobile text-on-background tracking-tighter italic uppercase">
+            ForAlana
+        </div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[100px] md:pt-[140px] md:pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col gap-stack-lg">
+<!-- Header Section -->
+<section class="flex flex-col items-center text-center gap-stack-sm mt-stack-md">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-2 block">Slide 10/14</span><h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background tracking-tight">
+                Sketsa Visual Placeholder Kabesha
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Initial layout mockups demonstrating the 4-frame Kabesha sequence intended for the opening seconds of the videotron projection. Featuring sleek chrome borders and atmospheric depth.
+            </p>
+</section>
+<!-- Kabesha Frames Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter w-full">
+<!-- Frame 1 -->
+<div class="chrome-border rounded-xl aspect-[3/4] relative overflow-hidden group interactive-glow flex flex-col justify-end p-stack-sm cursor-pointer">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<!-- Image Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500 z-0" data-alt="A highly detailed cinematic portrait placeholder graphic with a dark elegant aesthetic. Deep black background with subtle neon pink atmospheric glow. A central elegant glowing wireframe silhouette indicating a figure. Sleek silver and chrome accents around the edges. Premium digital art installation style, high contrast, mysterious mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0feIqaA0w-P0cMrQhYF8LIh4qlsXMZe_-ayqnPLAK4Q-igDyPzQKdAM9wjQQHLvRJDfAWQaKtVcLO9NtmiCv8JXfIFb1EvdANhDeX-zD07S935NKYUeQyC15wLaZqCGNBd9mNC_kLt-zqcLnv0xgwOX0NZe5xKs5Jocxu64mIV3I971iLLATDUz_07wYd9AeeRi6NahltYEfbCI_LX330CdZUy1xn6G8JwnLL8asrajMmb_pUmasuzw')"></div>
+<!-- Content Overlay -->
+<div class="relative z-10 glass-panel p-4 rounded-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<span class="font-accent-serif text-accent-serif text-secondary block mb-1">01</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[24px] leading-tight text-on-background mb-2">Trainee Era</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant opacity-80">Initial reveal sequence focusing on the beginning journey.</p>
+</div>
+<!-- Corner Flare SVG -->
+<svg class="absolute top-4 left-4 w-6 h-6 text-secondary opacity-50 group-hover:opacity-100 transition-opacity duration-300 z-10" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" fill="currentColor"></path>
+</svg>
+</div>
+<!-- Frame 2 -->
+<div class="chrome-border rounded-xl aspect-[3/4] relative overflow-hidden group interactive-glow flex flex-col justify-end p-stack-sm cursor-pointer" style="transition-delay: 50ms;">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<!-- Image Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500 z-0" data-alt="A highly detailed cinematic portrait placeholder graphic with a dark elegant aesthetic. Deep black background with subtle neon purple atmospheric glow. A central elegant glowing wireframe silhouette indicating a figure. Sleek silver and chrome accents around the edges. Premium digital art installation style, high contrast, mysterious mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsant6kBVdZ2hl96iavYWlCqxyPkj6RKUBI9uY2t9U_YYqgy0jm5mDqedoSPSFVVF__LGAXLMXI-PBPstcD2YcuSeQ4zXLNXTopk4vQzhkpvgJp94DcRAVDjntYzT1AHoaQRkh5I3kHPlGKqtuGwHRa8kFRF6iSYgQ5KqTVJ2HYjdR-DONmGDpkG2Q5LDskbeDBFhbXuGSfSuJJaeYj1nu_u4SHct9cee2b7ptpn0mAJr0gO2pECcajQ')"></div>
+<!-- Content Overlay -->
+<div class="relative z-10 glass-panel p-4 rounded-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<span class="font-accent-serif text-accent-serif text-secondary block mb-1">02</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[24px] leading-tight text-on-background mb-2">Cosmos Setup</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant opacity-80">Transitioning to the stellar themed promotional phase.</p>
+</div>
+<!-- Corner Flare SVG -->
+<svg class="absolute top-4 left-4 w-6 h-6 text-secondary opacity-50 group-hover:opacity-100 transition-opacity duration-300 z-10" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" fill="currentColor"></path>
+</svg>
+</div>
+<!-- Frame 3 -->
+<div class="chrome-border rounded-xl aspect-[3/4] relative overflow-hidden group interactive-glow flex flex-col justify-end p-stack-sm cursor-pointer" style="transition-delay: 100ms;">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<!-- Image Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500 z-0" data-alt="A highly detailed cinematic portrait placeholder graphic with a dark elegant aesthetic. Deep black background with subtle cool ice blue and pink atmospheric glow. A central elegant glowing wireframe silhouette indicating a figure. Sleek silver and chrome accents around the edges. Premium digital art installation style, high contrast, mysterious mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTIyozDhDxgOYVvkk9bCtj44_I94HTuQzVzvsgFa7x_SVfpYF-5of83o9_ejk0w89Nl26KQHT7ajHI6PHxeMtxaF2xjPo-XaFtdWvGE79U1xZdcHVv8DV4w7fKEmXYSlPlzmKlhRqNPvImIBzXbgqEQ-9SOxYm7GCfWY0kQC72Jzl_s9TfkUA09MU0ubqllZin9KlfD0hnsdOLlc2Nv783LwOmJefsFKFp8FJn1gOHnLxCLF6kIN__0g')"></div>
+<!-- Content Overlay -->
+<div class="relative z-10 glass-panel p-4 rounded-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<span class="font-accent-serif text-accent-serif text-secondary block mb-1">03</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[24px] leading-tight text-on-background mb-2">Snow Queen</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant opacity-80">Highlighting the winter-themed elegant visual concept.</p>
+</div>
+<!-- Corner Flare SVG -->
+<svg class="absolute top-4 left-4 w-6 h-6 text-secondary opacity-50 group-hover:opacity-100 transition-opacity duration-300 z-10" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" fill="currentColor"></path>
+</svg>
+</div>
+<!-- Frame 4 -->
+<div class="chrome-border rounded-xl aspect-[3/4] relative overflow-hidden group interactive-glow flex flex-col justify-end p-stack-sm cursor-pointer" style="transition-delay: 150ms;">
+<div class="absolute inset-0 bg-surface-container-low opacity-50 z-0"></div>
+<!-- Image Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500 z-0" data-alt="A highly detailed cinematic portrait placeholder graphic with a dark elegant aesthetic. Deep black background with intense magenta and warm pink atmospheric glow. A central elegant glowing wireframe silhouette indicating a figure. Sleek silver and chrome accents around the edges. Premium digital art installation style, high contrast, celebratory mood." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnhvIx1t-PKL1EHf3mJiAbOKa1gQimYOaE-RAp3T9rYBxnTpSHAxZSgCrLpDvZfLXv5AsPuzlonsux-C_rqM84Y4xoJYEMb5eO3xNhnLw6GLuv7m3eiZZvT8ZHu6QjKX_WrDbdNeKnpESqdosDvFxxlHeyb3MXsYmI21NG1V50EC1MWrEFnfso7CVEeT0atJzjCEs_Wvo9DMBqhFkNjQ7WSD5qkePlajVdQM1gdBui_CeaVB-ZumvbZw')"></div>
+<!-- Content Overlay -->
+<div class="relative z-10 glass-panel p-4 rounded-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+<span class="font-accent-serif text-accent-serif text-secondary block mb-1">04</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-[24px] leading-tight text-on-background mb-2">Love &amp; Finale</h3>
+<p class="font-body-md text-label-sm text-on-surface-variant opacity-80">The culmination frame displaying the final celebratory look.</p>
+</div>
+<!-- Corner Flare SVG -->
+<svg class="absolute top-4 left-4 w-6 h-6 text-secondary opacity-50 group-hover:opacity-100 transition-opacity duration-300 z-10" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 0L13.5 10.5L24 12L13.5 13.5L12 24L10.5 13.5L0 12L10.5 10.5L12 0Z" fill="currentColor"></path>
+</svg>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.8)] border-t border-white/10 rounded-t-full">
+<!-- Assuming user is browsing concepts, none specifically match the bottom nav intent perfectly, but let's highlight Cosmos as a placeholder active state for demonstration of styling -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="">Trainee</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="">Cosmos</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 shadow-[0_0_20px_rgba(255,62,201,0.4)] scale-110 duration-200 transition-transform font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined mb-1">ac_unit</span>
+<span class="">Snow</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="">Love</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined mb-1">celebration</span>
+<span class="">Outro</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-4 py-stack-md px-margin-desktop bg-background border-t border-outline-variant/30 md:mb-0">
+<div class="font-accent-serif text-accent-serif text-secondary">
+            ForAlana
+        </div>
+<div class="flex gap-stack-sm text-on-surface-variant font-body-md text-body-md text-center md:text-left">
+<span class="">© 2026 ForAlana Videotron Birthday Project. All rights reserved.</span>
+</div>
+<div class="flex gap-stack-sm font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Credits</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">www.foralana.com</a>
+</div>
+</footer>
+<script>
+        // Simple subtle parallax effect for the glow accents
+        document.addEventListener('mousemove', (e) => {
+            const glows = document.querySelectorAll('.glow-accent');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            glows.forEach((glow, index) => {
+                const speed = (index + 1) * 20;
+                const xOffset = (window.innerWidth / 2 - e.pageX) / speed;
+                const yOffset = (window.innerHeight / 2 - e.pageY) / speed;
+                
+                glow.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body></html>

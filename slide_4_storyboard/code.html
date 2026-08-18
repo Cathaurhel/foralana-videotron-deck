@@ -1,0 +1,401 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ForAlana Videotron - Storyboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=EB+Garamond:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#ff9fe3",
+                      "secondary": "#ff3ec9",
+                      "on-error": "#2a0000",
+                      "secondary-fixed": "#ffd6f3",
+                      "on-surface": "#ffffff",
+                      "outline": "#888888",
+                      "primary-container": "#100e1c",
+                      "tertiary-fixed-dim": "#d4ff00",
+                      "surface-variant": "#342e58",
+                      "inverse-on-surface": "#1a1a1a",
+                      "tertiary-container": "#1a1a1a",
+                      "inverse-primary": "#7b2fff",
+                      "on-secondary-fixed-variant": "#7a1f66",
+                      "background": "#1a1730",
+                      "primary-fixed-dim": "#22e5ff",
+                      "primary-fixed": "#b8f5ff",
+                      "on-primary": "#0a1a1f",
+                      "on-primary-fixed-variant": "#0f3a40",
+                      "surface-container-low": "#1c1930",
+                      "secondary-container": "#4a1240",
+                      "on-error-container": "#ffd6d6",
+                      "secondary-fixed-dim": "#ff3ec9",
+                      "surface-container-high": "#2a2548",
+                      "inverse-surface": "#ffffff",
+                      "surface-container-lowest": "#100e1c",
+                      "on-primary-fixed": "#071a1d",
+                      "error-container": "#7a0010",
+                      "tertiary-fixed": "#f1ffa8",
+                      "surface-container": "#201c38",
+                      "surface-dim": "#1a1730",
+                      "on-secondary": "#2e0a24",
+                      "error": "#ff6b6b",
+                      "on-tertiary-fixed-variant": "#3a4200",
+                      "tertiary": "#d4ff00",
+                      "outline-variant": "#3a3560",
+                      "on-secondary-fixed": "#3a0a30",
+                      "on-primary-container": "#22e5ff",
+                      "on-tertiary-fixed": "#1f2400",
+                      "on-background": "#ffffff",
+                      "surface-tint": "#22e5ff",
+                      "surface-container-highest": "#342e58",
+                      "primary": "#22e5ff",
+                      "on-tertiary": "#1a1f00",
+                      "surface": "#1a1730",
+                      "surface-bright": "#2a2645",
+                      "on-tertiary-container": "#d4ff00",
+                      "on-surface-variant": "#e0e0e0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-md": "32px",
+                      "stack-sm": "16px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "stack-lg": "64px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "accent-serif": [
+                              "EB Garamond"
+                      ],
+                      "headline-xl": [
+                              "Montserrat"
+                      ],
+                      "label-sm": [
+                              "Montserrat"
+                      ],
+                      "display-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "96px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "accent-serif": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "900"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Atmospheric Glow */
+        .atmospheric-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(123,47,255,0.2) 0%, transparent 60%);
+            position: absolute;
+            inset: -20%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid transparent;
+            border-image: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.05) 50%, transparent 100%) 1;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+
+        .glossy-frame {
+            border-top: 1px solid rgba(255,255,255,0.4);
+            border-left: 1px solid rgba(255,255,255,0.2);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Neon Glows */
+        .neon-glow-pink {
+            box-shadow: 0 0 20px rgba(255,62,201,0.5);
+        }
+        
+        .neon-text-glow {
+            text-shadow: 0 0 15px rgba(255,62,201,0.6);
+        }
+        
+        /* Chrome rim button hover */
+        .chrome-button {
+            border: 1px solid transparent;
+            background: linear-gradient(#100e1c, #100e1c) padding-box,
+                        linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.05) 100%) border-box;
+            transition: all 0.3s ease;
+        }
+        .chrome-button:hover {
+            box-shadow: 0 0 20px rgba(255,62,201,0.5);
+            border-color: rgba(255,62,201,0.5);
+        }
+        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen overflow-x-hidden selection:bg-secondary selection:text-on-secondary relative">
+<!-- Global Atmospheric Glow Background -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-[-1]">
+<div class="absolute top-[-20%] left-[-10%] w-[120vw] h-[1228px] rounded-full" style="background: radial-gradient(circle at center, rgba(74,18,64,0.15) 0%, rgba(26,23,48,0) 60%); filter: blur(60px);"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[80vw] h-[819px] rounded-full" style="background: radial-gradient(circle at center, rgba(255,62,201,0.08) 0%, rgba(26,23,48,0) 50%); filter: blur(80px);"></div>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(123,47,255,0.3)] transition-all duration-300 ease-in-out">
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background tracking-tighter italic uppercase hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)] transition-colors" href="#">
+            ForAlana
+        </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-8 items-center font-label-sm text-label-sm">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Konsep</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Moodboard</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Storyboard</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Milestones</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Outro</a>
+</nav>
+<div class="hidden md:block">
+<a class="text-secondary hover:text-on-secondary-container transition-colors font-label-sm text-label-sm tracking-widest uppercase" href="#">www.foralana.com</a>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-[120px] md:pt-[160px] pb-[100px] md:pb-[80px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<!-- Section Header -->
+<div class="mb-stack-lg relative">
+<div class="inline-block px-4 py-1 rounded-full border border-secondary/30 bg-secondary/10 mb-unit">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">04 - MATERI DASAR KE VIDEOTRON</span>
+</div><span class="ml-4 font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase opacity-60">Slide 04/14</span>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mt-2">
+                Storyboard <span class="text-secondary font-accent-serif italic">tayangan</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-2xl">
+                Lineup V2-2024 - Konsep, bukan final
+            </p>
+</div>
+<!-- Horizontal Timeline / Storyboard Track -->
+<div class="relative w-full overflow-hidden mb-stack-lg">
+<!-- Timeline Line Behind -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent hidden lg:block -z-10"></div>
+<div class="flex flex-col lg:flex-row gap-gutter overflow-x-auto hide-scrollbar pb-stack-sm snap-x snap-mandatory">
+<!-- Storyboard Item 01 -->
+<article class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(20%-19.2px)] snap-start group relative">
+<div class="glass-panel glossy-frame rounded-xl p-6 h-full flex flex-col items-start transition-all duration-500 hover:bg-surface-container-high/50 hover:shadow-[0_0_30px_rgba(255,62,201,0.15)] hover:-translate-y-2">
+<!-- Connecting Line/Arrow -->
+<div class="absolute -right-5 top-[50%] transform -translate-y-1/2 hidden lg:flex items-center text-secondary/40 group-hover:text-secondary transition-colors z-20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">arrow_forward_ios</span>
+</div>
+<div class="mb-stack-sm w-full">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[64px] text-secondary/20 font-black leading-none group-hover:text-secondary group-hover:neon-text-glow transition-all duration-500 block mb-2">01</span>
+<div class="h-[1px] w-12 bg-secondary/30 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+</div>
+<h3 class="font-headline-lg text-[24px] leading-tight text-on-background mb-4 uppercase tracking-tight group-hover:text-secondary transition-colors">All Kabesha + Era Trainee</h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant flex-grow">Layar meredup elegan. Muncul 4 foto Kabesha secara bergantian. Transisi bintang, foto Ali JKT48, foto Tinggi, Personal Member set.</p>
+</div>
+</article>
+<!-- Storyboard Item 02 -->
+<article class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(20%-19.2px)] snap-start group relative">
+<div class="glass-panel glossy-frame rounded-xl p-6 h-full flex flex-col items-start transition-all duration-500 hover:bg-surface-container-high/50 hover:shadow-[0_0_30px_rgba(255,62,201,0.15)] hover:-translate-y-2">
+<!-- Connecting Line/Arrow -->
+<div class="absolute -right-5 top-[50%] transform -translate-y-1/2 hidden lg:flex items-center text-secondary/40 group-hover:text-secondary transition-colors z-20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">arrow_forward_ios</span>
+</div>
+<div class="mb-stack-sm w-full">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[64px] text-secondary/20 font-black leading-none group-hover:text-secondary group-hover:neon-text-glow transition-all duration-500 block mb-2">02</span>
+<div class="h-[1px] w-12 bg-secondary/30 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+</div>
+<h3 class="font-headline-lg text-[24px] leading-tight text-on-background mb-4 uppercase tracking-tight group-hover:text-secondary transition-colors">
+                            Era Cosmos
+                        </h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant flex-grow">
+                            Transisi bertahap memasuki Era Cosmos. Rentetan memunculkan part singkat di: Oh My Pumpkin, Go In Fight, Tour JKT48 2023.
+                        </p>
+</div>
+</article>
+<!-- Storyboard Item 03 -->
+<article class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(20%-19.2px)] snap-start group relative">
+<div class="glass-panel glossy-frame rounded-xl p-6 h-full flex flex-col items-start transition-all duration-500 hover:bg-surface-container-high/50 hover:shadow-[0_0_30px_rgba(255,62,201,0.15)] hover:-translate-y-2">
+<!-- Connecting Line/Arrow -->
+<div class="absolute -right-5 top-[50%] transform -translate-y-1/2 hidden lg:flex items-center text-secondary/40 group-hover:text-secondary transition-colors z-20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">arrow_forward_ios</span>
+</div>
+<div class="mb-stack-sm w-full">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[64px] text-secondary/20 font-black leading-none group-hover:text-secondary group-hover:neon-text-glow transition-all duration-500 block mb-2">03</span>
+<div class="h-[1px] w-12 bg-secondary/30 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+</div>
+<h3 class="font-headline-lg text-[24px] leading-tight text-on-background mb-4 uppercase tracking-tight group-hover:text-secondary transition-colors">
+                            Era Snow
+                        </h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant flex-grow">
+                            Efek visual tabir membuka ke nuansa Era Snow. Menyoroti momen seru First Snow Team Announce, FF Futsal, hingga Pokemon TT Event IDG.
+                        </p>
+</div>
+</article>
+<!-- Storyboard Item 04 -->
+<article class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(20%-19.2px)] snap-start group relative">
+<div class="glass-panel glossy-frame rounded-xl p-6 h-full flex flex-col items-start transition-all duration-500 hover:bg-surface-container-high/50 hover:shadow-[0_0_30px_rgba(255,62,201,0.15)] hover:-translate-y-2">
+<!-- Connecting Line/Arrow -->
+<div class="absolute -right-5 top-[50%] transform -translate-y-1/2 hidden lg:flex items-center text-secondary/40 group-hover:text-secondary transition-colors z-20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 300;">arrow_forward_ios</span>
+</div>
+<div class="mb-stack-sm w-full">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[64px] text-secondary/20 font-black leading-none group-hover:text-secondary group-hover:neon-text-glow transition-all duration-500 block mb-2">04</span>
+<div class="h-[1px] w-12 bg-secondary/30 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+</div>
+<h3 class="font-headline-lg text-[24px] leading-tight text-on-background mb-4 uppercase tracking-tight group-hover:text-secondary transition-colors">
+                            Era Love
+                        </h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant flex-grow">Nuansa memudar hangat ke pink, menyorot kebersamaan: Teater Sementara, 12 Second, Shonichi, RKJ, BNT, dan Idol no Yoake.</p>
+</div>
+</article>
+<!-- Storyboard Item 05 -->
+<article class="flex-none w-full md:w-[calc(50%-12px)] lg:w-[calc(20%-19.2px)] snap-start group relative">
+<div class="glass-panel glossy-frame rounded-xl p-6 h-full flex flex-col items-start transition-all duration-500 hover:bg-surface-container-high/50 hover:shadow-[0_0_30px_rgba(255,62,201,0.15)] hover:-translate-y-2">
+<div class="mb-stack-sm w-full">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-[64px] text-secondary/20 font-black leading-none group-hover:text-secondary group-hover:neon-text-glow transition-all duration-500 block mb-2">05</span>
+<div class="h-[1px] w-12 bg-secondary/30 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+</div>
+<h3 class="font-headline-lg text-[24px] leading-tight text-on-background mb-4 uppercase tracking-tight group-hover:text-secondary transition-colors">
+                            Outro &amp; Wishes
+                        </h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant flex-grow">Layar perlahan meredup, meninggalkan pesan "Leave her a birthday wish!" beserta tautan web foralana.com dan deretan nama fans.</p>
+</div>
+</article>
+</div>
+</div>
+<!-- Summary / Conclusion Block -->
+<div class="glass-panel glossy-frame rounded-xl p-margin-mobile md:p-margin-desktop text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-secondary/5 to-transparent pointer-events-none"></div>
+<p class="font-body-lg text-body-lg text-on-background/80 max-w-3xl mx-auto relative z-10 italic">
+                Rangkuman Perjalanan (15 detik): Bernostalgia melewati 4 era yang penuh makna, mengalir dinamis dan ditutup dengan untaian pesan manis (animasi gradasi epilog) untuk Alana.
+            </p>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest/90 backdrop-blur-2xl rounded-t-full border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.8)] scale-110 duration-200 transition-transform">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary" href="#">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="font-label-sm text-label-sm">Trainee</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary" href="#">
+<span class="material-symbols-outlined mb-1">auto_awesome</span>
+<span class="font-label-sm text-label-sm">Cosmos</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 shadow-[0_0_20px_rgba(255,62,201,0.4)]" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">videocam</span> <!-- Changed icon to represent storyboard -->
+<span class="font-label-sm text-label-sm">Story</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label-sm text-label-sm">Love</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary" href="#">
+<span class="material-symbols-outlined mb-1">celebration</span>
+<span class="font-label-sm text-label-sm">Outro</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center gap-4 py-stack-md px-margin-desktop bg-background border-t border-outline-variant/30 pb-[100px] md:pb-stack-md">
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+            © 2024 ForAlana Videotron Birthday Project. All rights reserved.
+        </p>
+<div class="flex gap-6 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Credits</a>
+<a class="font-accent-serif text-accent-serif text-secondary hover:text-secondary-fixed transition-colors ml-4" href="#">www.foralana.com</a>
+</div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Era Cosmos - ForAlana</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#ff9fe3",
+                        "surface-container-highest": "#342e58",
+                        "surface-bright": "#2a2645",
+                        "surface": "#1a1730",
+                        "surface-container": "#201c38",
+                        "primary-container": "#100e1c",
+                        "surface-tint": "#22e5ff",
+                        "surface-container-low": "#1c1930",
+                        "on-primary-fixed": "#071a1d",
+                        "tertiary-container": "#1a1a1a",
+                        "on-secondary-fixed": "#3a0a30",
+                        "primary-fixed": "#b8f5ff",
+                        "background": "#1a1730",
+                        "on-tertiary": "#1a1f00",
+                        "on-primary-container": "#22e5ff",
+                        "surface-variant": "#342e58",
+                        "on-primary": "#0a1a1f",
+                        "error": "#ff6b6b",
+                        "surface-container-lowest": "#100e1c",
+                        "tertiary-fixed-dim": "#d4ff00",
+                        "on-tertiary-container": "#d4ff00",
+                        "on-error-container": "#ffd6d6",
+                        "on-primary-fixed-variant": "#0f3a40",
+                        "on-error": "#2a0000",
+                        "on-tertiary-fixed-variant": "#3a4200",
+                        "primary-fixed-dim": "#22e5ff",
+                        "secondary": "#ff3ec9",
+                        "tertiary-fixed": "#f1ffa8",
+                        "secondary-fixed-dim": "#ff3ec9",
+                        "primary": "#22e5ff",
+                        "outline": "#888888",
+                        "inverse-surface": "#ffffff",
+                        "outline-variant": "#3a3560",
+                        "surface-container-high": "#2a2548",
+                        "inverse-on-surface": "#1a1a1a",
+                        "secondary-fixed": "#ffd6f3",
+                        "on-surface": "#ffffff",
+                        "secondary-container": "#4a1240",
+                        "inverse-primary": "#7b2fff",
+                        "on-secondary": "#2e0a24",
+                        "on-surface-variant": "#e0e0e0",
+                        "on-tertiary-fixed": "#1f2400",
+                        "error-container": "#7a0010",
+                        "tertiary": "#d4ff00",
+                        "surface-dim": "#1a1730",
+                        "on-background": "#ffffff",
+                        "on-secondary-fixed-variant": "#7a1f66"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "stack-md": "32px",
+                        "container-max": "1280px",
+                        "stack-lg": "64px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "stack-sm": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "accent-serif": ["EB Garamond"],
+                        "headline-xl": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "accent-serif": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "display-lg": ["80px", { "lineHeight": "96px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #1a1730; /* primary-container */
+            color: #ffffff; /* on-background */
+            overflow-x: hidden;
+        }
+
+        /* Atmospheric Glows */
+        .glow-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150vw;
+            height: 150vh;
+            background: radial-gradient(circle at center, rgba(123,47,255,0.15) 0%, rgba(26,23,48,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .glow-accent {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,62,201,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            filter: blur(40px);
+        }
+
+        /* Glassmorphism & Glossy Frames */
+        .glass-card {
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-left: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
+            transform: skewX(-20deg);
+            animation: shine 8s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        /* Interactive Depth */
+        .interactive-glow:hover {
+            box-shadow: 0 0 20px rgba(255,62,201,0.4);
+            transform: translateY(-4px);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* Text Gradients */
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-gradient-secondary {
+            background: linear-gradient(135deg, #ff3ec9 0%, #4a1240 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Milestone Numbers */
+        .milestone-number {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            color: rgba(123,47,255,0.2); /* secondary container dark */
+            font-size: 8rem;
+            position: absolute;
+            top: -20px;
+            right: 0px;
+            line-height: 1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Lens Flare SVG */
+        .lens-flare {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative">
+<!-- Atmospheric Background -->
+<div class="glow-bg"></div>
+<!-- Top Navigation (Desktop) -->
+<header class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-background/80 backdrop-blur-xl shadow-[0_0_20px_rgba(123,47,255,0.3)] transition-all duration-300 ease-in-out hover:scale-[1.02]">
+<div class="font-display-lg text-display-lg text-on-background tracking-tighter italic uppercase">
+            ForAlana
+        </div>
+<nav class="flex gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Konsep</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Moodboard</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Storyboard</a>
+<a class="font-label-sm text-label-sm text-secondary font-bold border-b-2 border-secondary pb-1 hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Milestones</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors hover:text-secondary hover:shadow-[0_0_15px_rgba(255,62,201,0.5)]" href="#">Outro</a>
+</nav>
+<div class="font-label-sm text-label-sm text-primary">
+            www.foralana.com
+        </div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow pt-[120px] pb-[100px] md:pb-[80px] px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto relative z-10">
+<!-- Section Header -->
+<div class="mb-stack-lg relative"><div class="font-label-sm text-label-sm text-secondary/60 mb-unit tracking-widest uppercase">Slide 06/14</div>
+<div class="glow-accent top-[-100px] left-[-100px]"></div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-gradient mb-unit">Era Cosmos</h1>
+<p class="font-accent-serif text-accent-serif text-secondary max-w-2xl">A journey through stardust and soundwaves. Defining the milestones that shaped the Cosmos era.</p>
+</div>
+<!-- Bento Grid Layout for Milestones -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Milestone 1: Oh My Pumpkin (Large Card) -->
+<div class="md:col-span-8 glass-card rounded-xl p-stack-md interactive-glow relative group">
+<svg class="lens-flare" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" fill="url(#glow1)" r="20"></circle>
+<defs>
+<radialGradient id="glow1">
+<stop offset="0%" stop-color="#ff3ec9" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#ff3ec9" stop-opacity="0"></stop>
+</radialGradient>
+</defs>
+</svg>
+<div class="milestone-number">01</div>
+<div class="flex flex-col md:flex-row gap-stack-sm h-full">
+<div class="md:w-1/2 flex flex-col justify-center relative z-10">
+<div class="inline-block px-3 py-1 bg-secondary-container/50 rounded-full mb-stack-sm w-max">
+<span class="font-label-sm text-label-sm text-on-surface">Release</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-unit group-hover:text-secondary transition-colors duration-300">Oh My Pumpkin</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">The genesis of the Cosmos sound. A sonic exploration that set the stage for everything to follow, blending ethereal melodies with driving beats.</p>
+<div class="mt-auto flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span class="font-label-sm text-label-sm">LISTEN NOW</span>
+</div>
+</div>
+<div class="md:w-1/2 h-48 md:h-auto rounded-lg overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A cinematic, highly detailed abstract 3D render representing music and soundwaves. Glowing neon orange and purple geometric shapes floating in a deep dark void. Glassmorphic elements reflecting light. Premium, high-end digital art style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCLOQIoxMWRLqG9_GLVOAy2TK7z4qwu-mCXQ341m4chq4o2ez3tTSAOftgdvTfNBhZsAlEcwRTWWtQ_307giEhiDv5jxZHnFhGkJJ5JlpFd7BXKTg83q2UfLyn2_0oP4B5IndQ4Tfj8p_VKsYKfdGbDwUW5B7ybBy32A79pC5QjptVPufiUW5AbnZ7hpCatyt7BTONlOAg1JOYoD1DIbdrkNehNjzdiRBB1GzE7pKikhmrR8QeRJj_fvA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+</div>
+</div>
+<!-- Milestone 2: Go n Fight (Tall Card) -->
+<div class="md:col-span-4 glass-card rounded-xl p-stack-md interactive-glow relative group flex flex-col">
+<div class="milestone-number">02</div>
+<div class="relative z-10 flex-grow flex flex-col">
+<div class="inline-block px-3 py-1 bg-secondary-container/50 rounded-full mb-stack-sm w-max">
+<span class="font-label-sm text-label-sm text-on-surface">Anthem</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-unit group-hover:text-secondary transition-colors duration-300">Go n Fight</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">The rallying cry of the era. High-energy, unyielding, and visually spectacular in its live execution.</p>
+<div class="mt-auto h-32 rounded-lg overflow-hidden relative mt-stack-sm">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A dynamic, high-energy live concert scene. Silhouettes of a crowd against an intense, bright neon pink and purple stage light flare. Cinematic depth of field, high-contrast dark mode aesthetic. Capturing a moment of peak performance." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMQwSC2dUtaThoikLMi7YzB4aJt11IiLIC3LcL_epFnizr2ypW5W6TY_UfwFQqxIp0OXbFIGJsni06P3eSCFPAZiLuE1uhY98S2yy67e3SPgOM5FAQjCgIL-ikijRFMvf5wFCSXA4EydIeR827qQ2_-RucaojFShblwfoUZKiAEdV1hhbdA8Pxkzor6dfGQU4VuBCNzRDYL4oqBvq5KU2qv-P3T9HXEvPmMUAIQAau-nJL2KhjhITr3g')"></div>
+</div>
+</div>
+</div>
+<!-- Milestone 3: Tour All IN (Wide Card) -->
+<div class="md:col-span-6 glass-card rounded-xl p-stack-md interactive-glow relative group">
+<div class="milestone-number">03</div>
+<div class="relative z-10">
+<div class="inline-block px-3 py-1 bg-secondary-container/50 rounded-full mb-stack-sm w-max">
+<span class="font-label-sm text-label-sm text-on-surface">Live Experience</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-unit group-hover:text-secondary transition-colors duration-300">Tour All IN</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md">Taking the Cosmos on the road. A visual and auditory spectacle that defined the live experience of the era, bringing the digital aesthetic into physical spaces.</p>
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">public</span>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">stadium</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Milestone 4: STS 2025 (Wide Card) -->
+<div class="md:col-span-6 glass-card rounded-xl p-stack-md interactive-glow relative group overflow-hidden">
+<div class="glow-accent bottom-[-50px] right-[-50px] opacity-50"></div>
+<div class="milestone-number">04</div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="inline-block px-3 py-1 bg-secondary-container/50 rounded-full mb-stack-sm w-max">
+<span class="font-label-sm text-label-sm text-on-surface">Culmination</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-unit group-hover:text-secondary transition-colors duration-300">STS 2026</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The grand finale. A massive collaborative event that solidified the legacy of the Cosmos era, pushing boundaries of digital-physical integration.</p>
+</div>
+<button class="mt-stack-sm w-max px-6 py-3 bg-surface-container-high border border-outline-variant rounded-full font-label-sm text-label-sm text-on-surface hover:border-secondary hover:text-secondary hover:shadow-[0_0_20px_rgba(255,62,201,0.3)] transition-all duration-300 flex items-center gap-2">
+<span class="">VIEW HIGHLIGHTS</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile) -->
+<footer class="w-full py-8 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/30 mt-auto relative z-10">
+    <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">
+            © 2026 ForAlana Videotron Birthday Project. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+            <a href="#" class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors">Privacy Policy</a>
+            <a href="#" class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors">Terms of Service</a>
+        </div>
+    </div>
+</footer><nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface-container-lowest/90 backdrop-blur-2xl rounded-t-full shadow-[0_-10px_40px_rgba(0,0,0,0.8)] glassmorphism-effect">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="font-label-sm text-[10px] uppercase tracking-wider">Trainee</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full p-3 shadow-[0_0_20px_rgba(255,62,201,0.4)] scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-[10px] uppercase tracking-wider">Cosmos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">ac_unit</span>
+<span class="font-label-sm text-[10px] uppercase tracking-wider">Snow</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label-sm text-[10px] uppercase tracking-wider">Love</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-3 opacity-60 hover:opacity-100 hover:text-secondary scale-110 duration-200 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">celebration</span>
+<span class="font-label-sm text-[10px] uppercase tracking-wider">Outro</span>
+</a>
+</nav>
+
+
+
+
+</body></html>
